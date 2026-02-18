@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        String originalFile = "resources/test.txt";
+        String originalFile = "../resources/test.txt";
         byte[] data = null;
 
         try {
@@ -50,8 +50,8 @@ public class Main {
         System.out.println("----------------------------------------------------------------------------------");
 
         ShannonFano sf = new ShannonFano(symbols);
-        String sfEncodedFile = "resources/ShannonFanoEncoded.bin";
-        String sfDecodedFile = "resources/ShannonFanoDecoded.bin";
+        String sfEncodedFile = "../resources/ShannonFanoEncoded.bin";
+        String sfDecodedFile = "../resources/ShannonFanoDecoded.bin";
         sf.generateEncodedFile(sfEncodedFile, data);
         sf.decodeEncodedFile(sfEncodedFile, sfDecodedFile);
         boolean sfResult = compareFiles(originalFile, sfDecodedFile);
@@ -73,8 +73,8 @@ public class Main {
         System.out.println("----------------------------------------------------------------------------------");
 
         Huffman h = new Huffman(symbols);
-        String hEncodedFile = "resources/HuffmanEncoded.bin";
-        String hDecodedFile = "resources/HuffmanDecoded.bin";
+        String hEncodedFile = "../resources/HuffmanEncoded.bin";
+        String hDecodedFile = "../resources/HuffmanDecoded.bin";
         h.generateEncodedFile(hEncodedFile, data);
         h.decodeEncodedFile(hEncodedFile, hDecodedFile);
         boolean hResult = compareFiles(originalFile, hDecodedFile);
@@ -96,8 +96,8 @@ public class Main {
         System.out.println("----------------------------------------------------------------------------------");
 
         LZ77 lz77 = new LZ77(4);
-        String lz77EncodedFile = "resources/LZ77Encoded.bin";
-        String lz77DecodedFile = "resources/LZ77Decoded.bin";
+        String lz77EncodedFile = "../resources/LZ77Encoded.bin";
+        String lz77DecodedFile = "../resources/LZ77Decoded.bin";
         lz77.generateEncodedFile(lz77EncodedFile, data);
         lz77.decodeEncodedFile(lz77EncodedFile, lz77DecodedFile);
         boolean lz77Result = compareFiles(originalFile, lz77DecodedFile);
@@ -119,8 +119,8 @@ public class Main {
         System.out.println("----------------------------------------------------------------------------------");
 
         LZW lzw = new LZW();
-        String lzwEncodedFile = "resources/LZWEncoded.bin";
-        String lzwDecodedFile = "resources/LZWDecoded.bin";
+        String lzwEncodedFile = "../resources/LZWEncoded.bin";
+        String lzwDecodedFile = "../resources/LZWDecoded.bin";
         lzw.generateEncodedFile(lzwEncodedFile, data);
         lzw.decodeEncodedFile(lzwEncodedFile, lzwDecodedFile);
         boolean lzwResult = compareFiles(originalFile, lzwDecodedFile);
