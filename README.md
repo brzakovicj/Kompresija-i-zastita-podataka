@@ -1,10 +1,10 @@
-* Kompresija i zaštita podataka
+# Kompresija i zaštita podataka
 
-** Projekat 1
-*** Opis
+## Projekat 1
+### Opis
 Projekat implementira kompresiju binarnih fajlova primenom klasičnih algoritama kompresije.
 
-*** Funkcionalnosti
+### Funkcionalnosti
 - **Bajt-entropija** - izračunava entropiju fajla na osnovu učestalosti pojavljivanja svakog bajta (0–255).
 - **Algoritmi kompresije**:
   - Shannon-Fano
@@ -15,13 +15,13 @@ Projekat implementira kompresiju binarnih fajlova primenom klasičnih algoritama
 - **Poređenje originalnog i dekompresovanog fajla**
 - **Izračunavanje stepena kompresije za svaki algoritam**
 
-*** Struktura projekta
+### Struktura projekta
 - `Main.java` – glavna klasa
 - `algorithms/` – implementacije svih algoritama i entropije
 - `structures/` – pomoćne strukture podataka
 - `resources/` – ulazni i izlazni fajlovi
 
-*** Pokretanje
+### Pokretanje
 1. Instalirati JDK 23 ili noviju verziju
 2. Otvoriti terminal u folderu projekat_1/src
 3. Kompajlirati projekat:
@@ -37,12 +37,12 @@ java Main
 
 ---
 
-** Projekat 2
+## Projekat 2
 
-*** Opis
+### Opis
 Projekat implementira LDPC (Low-Density Parity-Check) kod i Gallager-B algoritam za dekodiranje.
 
-*** Funkcionalnosti
+### Funkcionalnosti
 - **Generisanje LDPC kontrolne matrice H** - parametri: *n = 15, n − k = 9, wr = 5, w𝚌 = 3*
 - **Generisanje tabele sindroma i korektora**
 - **Određivanje minimalnog kodnog rastojanja**
@@ -50,12 +50,12 @@ Projekat implementira LDPC (Low-Density Parity-Check) kod i Gallager-B algoritam
 - **Određivanje minimalnog broja grešaka koje algoritam ne može da ispravi**
 - **Poređenje sa teorijskom granicom ispravljanja grešaka**
 
-*** Struktura projekta
+### Struktura projekta
 - `Main.java` – pokretanje svih funkcionalnosti
 - `LDPCCode.java` – implementacija matrice H, sindroma i Gallager-B algoritma
 - `Matrix.java` i `ArrayOfBits.java` – pomoćne strukture za rad sa matricama i bit nizovima
 
-*** Pokretanje
+### Pokretanje
 1. Instalirati JDK 23 ili noviju verziju
 2. Otvoriti terminal u folderu projekat_2/src
 3. Kompajlirati projekat:
